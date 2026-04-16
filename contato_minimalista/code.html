@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+
+<html class="light" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,700;1,400;1,500&amp;family=Manrope:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-fixed": "#3f3f3f",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary-fixed": "#403f3f",
+                    "tertiary-fixed-dim": "#c2def0",
+                    "on-error-container": "#752121",
+                    "on-secondary": "#fbf8f8",
+                    "surface-bright": "#f9f9f9",
+                    "tertiary-dim": "#3c5666",
+                    "tertiary-container": "#d0ecff",
+                    "error-container": "#fe8983",
+                    "primary": "#5f5e5e",
+                    "on-tertiary-container": "#3e5868",
+                    "error-dim": "#4e0309",
+                    "on-surface": "#2d3435",
+                    "secondary-container": "#e4e2e2",
+                    "secondary-fixed": "#e4e2e2",
+                    "on-error": "#fff7f6",
+                    "primary-dim": "#535252",
+                    "outline-variant": "#adb3b4",
+                    "on-background": "#2d3435",
+                    "tertiary-fixed": "#d0ecff",
+                    "outline": "#757c7d",
+                    "surface-variant": "#dde4e5",
+                    "on-tertiary": "#f4faff",
+                    "tertiary": "#486272",
+                    "primary-fixed-dim": "#d6d4d3",
+                    "on-primary": "#faf7f6",
+                    "on-surface-variant": "#5a6061",
+                    "secondary-fixed-dim": "#d6d4d3",
+                    "primary-container": "#e5e2e1",
+                    "on-primary-container": "#525151",
+                    "surface-container-low": "#f2f4f4",
+                    "primary-fixed": "#e5e2e1",
+                    "surface": "#f9f9f9",
+                    "inverse-surface": "#0c0f0f",
+                    "surface-tint": "#5f5e5e",
+                    "inverse-on-surface": "#9c9d9d",
+                    "on-tertiary-fixed-variant": "#486272",
+                    "error": "#9f403d",
+                    "inverse-primary": "#ffffff",
+                    "surface-container-high": "#e4e9ea",
+                    "surface-dim": "#d4dbdd",
+                    "on-secondary-fixed-variant": "#5c5b5b",
+                    "background": "#f9f9f9",
+                    "surface-container-highest": "#dde4e5",
+                    "surface-container": "#ebeeef",
+                    "on-secondary-container": "#525252",
+                    "secondary-dim": "#535353",
+                    "on-primary-fixed-variant": "#5c5b5b",
+                    "secondary": "#5f5f5f",
+                    "on-tertiary-fixed": "#2c4655"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0px",
+                    "lg": "0px",
+                    "xl": "0px",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Newsreader"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+        h1, h2, h3 {
+            font-family: 'Newsreader', serif;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar from COMPONENTS_21 -->
+<header class="fixed top-0 w-full z-50 bg-stone-50/80 dark:bg-stone-950/80 backdrop-blur-xl shadow-[0_40px_60px_-15px_rgba(45,52,53,0.04)]">
+<nav class="flex justify-between items-center px-8 py-6 w-full max-w-screen-2xl mx-auto">
+<div class="flex items-center gap-3">
+<span class="text-xl font-serif newsreader tracking-widest text-stone-900 dark:text-stone-50">ARCHITECT.LOG</span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-stone-500 dark:text-stone-400 font-medium hover:text-stone-900 dark:hover:text-stone-50 transition-colors duration-300 font-['Manrope'] text-[12px] tracking-widest uppercase" href="#">Home</a>
+<a class="text-stone-500 dark:text-stone-400 font-medium hover:text-stone-900 dark:hover:text-stone-50 transition-colors duration-300 font-['Manrope'] text-[12px] tracking-widest uppercase" href="#">Sobre</a>
+<a class="text-stone-500 dark:text-stone-400 font-medium hover:text-stone-900 dark:hover:text-stone-50 transition-colors duration-300 font-['Manrope'] text-[12px] tracking-widest uppercase" href="#">Projetos</a>
+<a class="text-stone-500 dark:text-stone-400 font-medium hover:text-stone-900 dark:hover:text-stone-50 transition-colors duration-300 font-['Manrope'] text-[12px] tracking-widest uppercase" href="#">Experiência</a>
+<a class="text-stone-500 dark:text-stone-400 font-medium hover:text-stone-900 dark:hover:text-stone-50 transition-colors duration-300 font-['Manrope'] text-[12px] tracking-widest uppercase" href="#">Mentoria</a>
+<a class="text-stone-900 dark:text-stone-50 font-bold font-['Manrope'] text-[12px] tracking-widest uppercase" href="#">Contato</a>
+</div>
+<button class="md:hidden text-stone-800 dark:text-stone-200 active:scale-95 duration-200 opacity-80">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</nav>
+</header>
+<main class="pt-32 pb-24 px-8 min-h-screen max-w-7xl mx-auto flex flex-col items-center">
+<!-- Hero Section -->
+<section class="w-full max-w-2xl text-center mb-24">
+<h1 class="text-6xl md:text-8xl italic font-medium tracking-tight mb-8">Vamos Conversar.</h1>
+<p class="font-body text-lg text-on-surface-variant leading-relaxed max-w-lg mx-auto">
+                Disponível para novos projetos e colaborações que buscam excelência técnica e rigor arquitetônico.
+            </p>
+</section>
+<!-- Asymmetric Contact Grid -->
+<section class="w-full grid grid-cols-1 md:grid-cols-12 gap-16 items-start">
+<!-- Information Panel -->
+<div class="md:col-span-5 space-y-16">
+<div>
+<span class="block font-label text-[10px] uppercase tracking-[0.2em] text-outline mb-6">Informações de Contato</span>
+<div class="space-y-8">
+<div class="group">
+<span class="block font-label text-[10px] uppercase tracking-[0.1em] text-on-surface-variant mb-1">E-mail</span>
+<a class="text-2xl font-headline italic hover:text-primary transition-colors" href="mailto:maycoaoki@gmail.com">maycoaoki@gmail.com</a>
+</div>
+<div class="group">
+<span class="block font-label text-[10px] uppercase tracking-[0.1em] text-on-surface-variant mb-1">Telefone</span>
+<a class="text-2xl font-headline italic hover:text-primary transition-colors" href="tel:+5541992417303">(41) 9 9241-7303</a>
+</div>
+<div class="group">
+<span class="block font-label text-[10px] uppercase tracking-[0.1em] text-on-surface-variant mb-1">Localização</span>
+<p class="text-2xl font-headline italic">Curitiba – PR</p>
+</div>
+</div>
+</div>
+<div>
+<span class="block font-label text-[10px] uppercase tracking-[0.2em] text-outline mb-6">Social</span>
+<div class="flex gap-8">
+<a class="group flex items-center gap-2 hover:opacity-70 transition-opacity" href="https://linkedin.com/in/mayco-aoki">
+<span class="font-label text-[12px] uppercase tracking-widest font-bold">LinkedIn</span>
+<span class="material-symbols-outlined text-sm" data-icon="north_east">north_east</span>
+</a>
+</div>
+</div>
+<!-- Abstract Decorative Image -->
+<div class="hidden md:block w-full h-64 bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover grayscale opacity-50 hover:opacity-80 transition-opacity duration-700" data-alt="Minimalist architectural detail of a concrete facade with sharp shadows and geometric lines in soft grey tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnsvyY0hdd7KNKo4dHtdu5bZ6_veQFNMXw9fQGDglrd7ktmPhdxKz9G50uxekz_sQSDQg0cSoiKCpHaHbXdzfwBMvwo5d4kAFmNVYeMA3bhrYCbYvZBsUU6TOrv7FtA6Q8SkAEuqY-gnRYr5C4rlK_Mi7Aa0DzUe8vMY7XdNvKAoZdKP5nvD9INMCgFMK7ttGfiZ5NH-6pQy3e0t3m-2iTU2rju1nufly4O9hgfhLEoR11jBahcWwW772Kf31xD-YMOHv2DTndyF0"/>
+</div>
+</div>
+<!-- Form Panel -->
+<div class="md:col-span-7 bg-surface-container-lowest p-12 md:p-16">
+<form action="#" class="space-y-12">
+<div class="space-y-2">
+<label class="block font-label text-[10px] uppercase tracking-[0.1em] text-on-surface-variant" for="name">Nome Completo</label>
+<input class="w-full bg-transparent border-b border-outline-variant/40 focus:border-on-surface focus:ring-0 transition-colors py-3 px-0 font-body placeholder:text-outline-variant/50" id="name" name="name" placeholder="Como devo lhe chamar?" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="block font-label text-[10px] uppercase tracking-[0.1em] text-on-surface-variant" for="email">E-mail</label>
+<input class="w-full bg-transparent border-b border-outline-variant/40 focus:border-on-surface focus:ring-0 transition-colors py-3 px-0 font-body placeholder:text-outline-variant/50" id="email" name="email" placeholder="seuemail@exemplo.com" type="email"/>
+</div>
+<div class="space-y-2">
+<label class="block font-label text-[10px] uppercase tracking-[0.1em] text-on-surface-variant" for="message">Mensagem</label>
+<textarea class="w-full bg-transparent border-b border-outline-variant/40 focus:border-on-surface focus:ring-0 transition-colors py-3 px-0 font-body placeholder:text-outline-variant/50 resize-none" id="message" name="message" placeholder="Conte-me sobre o seu projeto..." rows="4"></textarea>
+</div>
+<div class="pt-8">
+<button class="group relative w-full bg-primary text-on-primary py-6 font-label text-[12px] font-bold tracking-[0.2em] uppercase overflow-hidden transition-all hover:bg-primary-dim" type="submit">
+<span class="relative z-10">Enviar Mensagem</span>
+</button>
+</div>
+</form>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-16 bg-[#ebeeef]">
+<div class="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="text-lg font-['Newsreader'] italic">MAYCO_AOKI</div>
+<div class="flex gap-12">
+<a class="font-['Manrope'] text-[12px] font-medium tracking-widest uppercase hover:opacity-70 transition-opacity" href="#">GITHUB</a>
+<a class="font-['Manrope'] text-[12px] font-medium tracking-widest uppercase hover:opacity-70 transition-opacity underline underline-offset-4" href="#">LINKEDIN</a>
+<a class="font-['Manrope'] text-[12px] font-medium tracking-widest uppercase hover:opacity-70 transition-opacity" href="#">SOURCE</a>
+</div>
+<p class="font-['Manrope'] text-[12px] font-medium tracking-widest uppercase text-neutral-700">© 2024 ENGINEER_PORTFOLIO. BUILT FOR SCALE.</p>
+</div>
+</footer>
+<!-- BottomNavBar from COMPONENTS_21 (Mobile Only) -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-6 pb-6 pt-2 md:hidden bg-stone-50 dark:bg-stone-950 border-t border-stone-200/15 dark:border-stone-800/15 z-50">
+<a class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-600 pt-2 transition-all duration-300 ease-in-out hover:bg-stone-100 dark:hover:bg-stone-900" href="#">
+<span class="material-symbols-outlined" data-icon="home_storage">home_storage</span>
+<span class="font-sans manrope uppercase tracking-[0.1em] text-[10px] mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-600 pt-2 transition-all duration-300 ease-in-out hover:bg-stone-100 dark:hover:bg-stone-900" href="#">
+<span class="material-symbols-outlined" data-icon="grid_view">grid_view</span>
+<span class="font-sans manrope uppercase tracking-[0.1em] text-[10px] mt-1">Projetos</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-600 pt-2 transition-all duration-300 ease-in-out hover:bg-stone-100 dark:hover:bg-stone-900" href="#">
+<span class="material-symbols-outlined" data-icon="work_history">work_history</span>
+<span class="font-sans manrope uppercase tracking-[0.1em] text-[10px] mt-1">Exp.</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-900 dark:text-stone-50 border-t-2 border-stone-900 dark:border-stone-50 pt-2 transition-all duration-300 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="mail" style="font-variation-settings: 'FILL' 1;">mail</span>
+<span class="font-sans manrope uppercase tracking-[0.1em] text-[10px] mt-1">Contato</span>
+</a>
+</nav>
+</body></html>

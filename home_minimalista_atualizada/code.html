@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+
+<html class="light" lang="pt-br"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Mayco Aoki | Full Stack Software Engineer</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Manrope:wght@200..800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-secondary-fixed": "#3f3f3f",
+                      "surface-container-lowest": "#ffffff",
+                      "on-primary-fixed": "#403f3f",
+                      "tertiary-fixed-dim": "#c2def0",
+                      "on-error-container": "#752121",
+                      "on-secondary": "#fbf8f8",
+                      "surface-bright": "#f9f9f9",
+                      "tertiary-dim": "#3c5666",
+                      "tertiary-container": "#d0ecff",
+                      "error-container": "#fe8983",
+                      "primary": "#5f5e5e",
+                      "on-tertiary-container": "#3e5868",
+                      "error-dim": "#4e0309",
+                      "on-surface": "#2d3435",
+                      "secondary-container": "#e4e2e2",
+                      "secondary-fixed": "#e4e2e2",
+                      "on-error": "#fff7f6",
+                      "primary-dim": "#535252",
+                      "outline-variant": "#adb3b4",
+                      "on-background": "#2d3435",
+                      "tertiary-fixed": "#d0ecff",
+                      "outline": "#757c7d",
+                      "surface-variant": "#dde4e5",
+                      "on-tertiary": "#f4faff",
+                      "tertiary": "#486272",
+                      "primary-fixed-dim": "#d6d4d3",
+                      "on-primary": "#faf7f6",
+                      "on-surface-variant": "#5a6061",
+                      "secondary-fixed-dim": "#d6d4d3",
+                      "primary-container": "#e5e2e1",
+                      "on-primary-container": "#525151",
+                      "surface-container-low": "#f2f4f4",
+                      "primary-fixed": "#e5e2e1",
+                      "surface": "#f9f9f9",
+                      "inverse-surface": "#0c0f0f",
+                      "surface-tint": "#5f5e5e",
+                      "inverse-on-surface": "#9c9d9d",
+                      "on-tertiary-fixed-variant": "#486272",
+                      "error": "#9f403d",
+                      "inverse-primary": "#ffffff",
+                      "surface-container-high": "#e4e9ea",
+                      "surface-dim": "#d4dbdd",
+                      "on-secondary-fixed-variant": "#5c5b5b",
+                      "background": "#f9f9f9",
+                      "surface-container-highest": "#dde4e5",
+                      "surface-container": "#ebeeef",
+                      "on-secondary-container": "#525252",
+                      "secondary-dim": "#535353",
+                      "on-primary-fixed-variant": "#5c5b5b",
+                      "secondary": "#5f5f5f",
+                      "on-tertiary-fixed": "#2c4655"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0px",
+                      "lg": "0px",
+                      "xl": "0px",
+                      "full": "9999px"
+              },
+              "fontFamily": {
+                      "headline": ["Newsreader", "serif"],
+                      "body": ["Manrope", "sans-serif"],
+                      "label": ["Manrope", "sans-serif"]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; }
+        .serif { font-family: 'Newsreader', serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<nav class="fixed top-0 w-full z-50 bg-stone-50/80 dark:bg-stone-950/80 backdrop-blur-xl shadow-[0_40px_60px_-15px_rgba(45,52,53,0.04)]">
+<div class="flex justify-between items-center px-8 py-6 w-full max-w-screen-2xl mx-auto">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-stone-800 dark:text-stone-200" data-icon="terminal">terminal</span>
+<span class="text-xl font-serif Newsreader tracking-widest text-stone-900 dark:text-stone-50 font-bold">ARCHITECT.LOG</span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-stone-900 dark:text-stone-50 font-bold transition-colors duration-300" href="/">Home</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-50 transition-colors duration-300" href="/sobre">Sobre</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-50 transition-colors duration-300" href="/projetos">Projetos</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-50 transition-colors duration-300" href="/experiencia">Experiência</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-50 transition-colors duration-300" href="/mentoria">Mentoria</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-50 transition-colors duration-300" href="/contato">Contato</a>
+</div>
+<button class="opacity-80 scale-95 duration-200 hover:opacity-100">
+<span class="material-symbols-outlined text-stone-800 dark:text-stone-200" data-icon="menu">menu</span>
+</button>
+</div>
+</nav>
+<main class="pt-32 pb-24">
+<!-- Hero Section -->
+<section class="max-w-7xl mx-auto px-8 mb-32">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-end">
+<div class="md:col-span-8">
+<span class="font-body text-xs uppercase tracking-[0.3em] text-on-surface-variant mb-6 block">Software Engineering Portfolio</span>
+<h1 class="serif italic font-medium text-[clamp(3.5rem,10vw,7rem)] leading-[0.9] text-on-surface mb-8">
+                    Mayco Aoki.
+                </h1>
+<p class="serif italic text-2xl md:text-3xl text-on-surface-variant max-w-2xl leading-relaxed">
+                    Engenheiro de Software Full Stack | Backend Specialist.
+                </p>
+</div>
+<div class="md:col-span-4 flex flex-col items-start md:items-end gap-6">
+<div class="text-right">
+<p class="font-body text-sm font-medium text-on-surface">Curitiba – PR</p>
+<p class="font-body text-xs text-on-surface-variant uppercase tracking-widest mt-1">Localização Atual</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Intro & CTA -->
+<section class="bg-surface-container py-32">
+<div class="max-w-7xl mx-auto px-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-32 items-center">
+<div>
+<h2 class="serif text-4xl md:text-5xl leading-tight text-on-surface mb-8">
+                        Construindo aplicações web escaláveis e sistemas de alta disponibilidade.
+                    </h2>
+<p class="font-body text-lg text-on-surface-variant leading-relaxed mb-12 max-w-lg">
+                        Com mais de 6 anos de experiência, foco no desenvolvimento de infraestruturas robustas e interfaces intuitivas que elevam a experiência do usuário.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary text-on-primary px-10 py-5 font-label text-sm tracking-widest uppercase hover:bg-primary-dim transition-colors duration-300">
+                            Ver Experiência
+                        </button>
+<button class="border border-outline-variant/20 px-10 py-5 font-label text-sm tracking-widest uppercase hover:bg-surface-container-high transition-colors duration-300">
+                            Entrar em Contato
+                        </button>
+</div>
+</div>
+<div class="relative">
+<div class="aspect-[4/5] bg-surface-container-highest overflow-hidden">
+<img alt="Professional portrait" class="w-full h-full object-cover grayscale contrast-125" data-alt="professional portrait of a software engineer in a minimal office setting with soft architectural lighting and clean lines" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKWNBgQuF8cf-06-B8YtPdBMz-PCkS6YO1NeUckx-YcIHvcDPIhnhGnfaU83JGdayckt2PGdn5B1Frs8x0OBsElNueXLMhy4t4q7hDLKrnLYzmOkHqHXPwJLLQqKKUMfU_xQCcm4ng6MPGtX103BsdeDPrOTIDtM7CrU7QYzyNruFhbH5JAZMPzjTdHwK-kRocvaLnqwRYEXfAi-2baVBbhEaRIbeol-ruY-CF5FOQ6OSb3x9mMSeoTN8Os74KHNvPonw8d8Gk-q4"/>
+</div>
+<div class="absolute -bottom-8 -left-8 bg-surface p-8 hidden lg:block shadow-[0_40px_60px_-15px_rgba(45,52,53,0.06)]">
+<span class="serif italic text-4xl text-on-surface">6+</span>
+<p class="font-body text-xs uppercase tracking-widest text-on-surface-variant mt-2">Years Excellence</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Stack Highlights (Bento Style) -->
+<section class="max-w-7xl mx-auto px-8 py-32">
+<div class="flex justify-between items-end mb-16">
+<div>
+<h3 class="font-label text-xs uppercase tracking-[0.3em] text-on-surface-variant mb-4">The Stack</h3>
+<h2 class="serif italic text-4xl">Tecnologias &amp; Ecossistemas</h2>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+<!-- Large Feature -->
+<div class="md:col-span-2 md:row-span-2 bg-surface-container-low p-12 flex flex-col justify-between aspect-square md:aspect-auto">
+<span class="material-symbols-outlined text-4xl text-primary" data-icon="database">database</span>
+<div>
+<h4 class="serif text-3xl mb-4">Backend Specialist</h4>
+<p class="font-body text-on-surface-variant leading-relaxed">Foco em performance e arquitetura de microsserviços usando linguagens de alto desempenho.</p>
+<div class="mt-8 flex flex-wrap gap-2">
+<span class="bg-surface-container-highest px-3 py-1 text-[10px] font-label tracking-widest uppercase text-on-surface-variant">PHP / Laravel</span>
+<span class="bg-surface-container-highest px-3 py-1 text-[10px] font-label tracking-widest uppercase text-on-surface-variant">C# / .NET</span>
+<span class="bg-surface-container-highest px-3 py-1 text-[10px] font-label tracking-widest uppercase text-on-surface-variant">Java</span>
+</div>
+</div>
+</div>
+<!-- Small Features -->
+<div class="bg-surface-container-highest p-8 aspect-square flex flex-col justify-between">
+<span class="material-symbols-outlined text-2xl text-primary" data-icon="terminal">terminal</span>
+<div>
+<h4 class="font-label text-xs uppercase tracking-widest mb-2">Node.js</h4>
+<p class="font-body text-sm text-on-surface-variant">Ambientes escaláveis em tempo real.</p>
+</div>
+</div>
+<div class="bg-surface-container p-8 aspect-square flex flex-col justify-between">
+<span class="material-symbols-outlined text-2xl text-primary" data-icon="layers">layers</span>
+<div>
+<h4 class="font-label text-xs uppercase tracking-widest mb-2">React / Next.js</h4>
+<p class="font-body text-sm text-on-surface-variant">Interfaces de alta performance.</p>
+</div>
+</div>
+<div class="md:col-span-2 bg-surface-container-low p-8 flex items-center justify-between">
+<div>
+<h4 class="font-label text-xs uppercase tracking-widest mb-2">Frameworks Adicionais</h4>
+<p class="font-body text-sm text-on-surface-variant">Vue.js, TypeScript, Docker, Kubernetes.</p>
+</div>
+<span class="material-symbols-outlined text-3xl text-outline-variant/40" data-icon="developer_board">developer_board</span>
+</div>
+</div>
+</section>
+<!-- Portfolio Teaser (Asymmetric) -->
+<section class="max-w-7xl mx-auto px-8 mb-32">
+<div class="flex flex-col gap-24">
+<div class="flex flex-col md:flex-row gap-12 items-start">
+<div class="w-full md:w-3/5">
+<div class="aspect-video bg-surface-container-high overflow-hidden">
+<img alt="Financial dashboard interface" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="minimal user interface of a high-end financial dashboard with clean typography and subtle tonal gradients" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEjGncYeuZR1OzglW1cHK0NJQqBJV8Y-VNpMBm8XtCTmqebLn3ybaRa3f5iu_kFZJ_lKJtxpTyheG2h-EoH3DNkof4Bwr3ZpsUpYggDS08aEYjwTYMuuPAglGp-7dpnoBfFCrBTsn-8wd22xc56H7B_RcB_XlBl1FnqgV0-sgb9glljk4Mf_RNCu8ZkS5fneMAyXGpCyp84dN3TdZuIPGhfea7y2kIRb1Gnx2s2M_7UiIhPNG17uIWgwz1BFGR7OrDxXXjhRrlTng"/>
+</div>
+</div>
+<div class="w-full md:w-2/5 pt-8">
+<span class="font-label text-[10px] uppercase tracking-[0.2em] text-on-surface-variant">01 / Fintech Solution</span>
+<h3 class="serif text-3xl mt-4 mb-6">Escalabilidade Bancária</h3>
+<p class="font-body text-on-surface-variant leading-relaxed mb-8">Desenvolvimento de core bancário para processamento de alto volume com arquitetura C# e SQL Server.</p>
+<a class="font-label text-xs uppercase tracking-widest border-b border-on-surface pb-1" href="#">Detalhes do Projeto</a>
+</div>
+</div>
+<div class="flex flex-col md:flex-row-reverse gap-12 items-start">
+<div class="w-full md:w-3/5">
+<div class="aspect-video bg-surface-container-high overflow-hidden">
+<img alt="E-commerce architecture diagram" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="abstract architectural diagram of a cloud infrastructure with clean lines and geometric shapes on a light background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpR21AG6_NOpVz8GzFhe6zHuzb0C3ZknMbfLdTntPuZrbATMXO_PA5aKgK_xqW8dGnDuF4J9IeA4LxziZGNhb44B70BVD4RETtU9Mnc6S3E0wEwLlGDtNjzmCLYbzUBh5b_sEz05dHaSF7a0CiJSZv8vq-eFloQcDshGA7MQ6LFCckRVVRC_kLSmMQFqNyYyDhpLIvvnYwUf3D3xXGcf6qmvtAAvKS5L_ONgHiyqskgOohbTn7gYJXkNiBkK2uuJyN9lQ2l4LtAMI"/>
+</div>
+</div>
+<div class="w-full md:w-2/5 pt-8 text-left md:text-right">
+<span class="font-label text-[10px] uppercase tracking-[0.2em] text-on-surface-variant">02 / E-commerce SaaS</span>
+<h3 class="serif text-3xl mt-4 mb-6">Engine de Disponibilidade</h3>
+<p class="font-body text-on-surface-variant leading-relaxed mb-8">Otimização de sistemas de inventário distribuídos utilizando Node.js e Redis para baixa latência.</p>
+<a class="font-label text-xs uppercase tracking-widest border-b border-on-surface pb-1" href="#">Detalhes do Projeto</a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#ebeeef] dark:bg-[#141414] w-full py-16">
+<div class="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="text-left">
+<span class="text-lg font-['Newsreader'] italic font-bold">MAYCO_AOKI</span>
+<p class="font-['Manrope'] text-[12px] font-medium tracking-widest uppercase text-neutral-700 dark:text-neutral-300 mt-2">
+                © 2024 ENGINEER_PORTFOLIO. BUILT FOR SCALE.
+            </p>
+</div>
+<div class="flex gap-12">
+<a class="font-['Manrope'] text-[12px] font-medium tracking-widest uppercase text-neutral-700 dark:text-neutral-300 no-underline hover:opacity-70 transition-opacity ease-in-out duration-500" href="#">GITHUB</a>
+<a class="font-['Manrope'] text-[12px] font-medium tracking-widest uppercase text-neutral-700 dark:text-neutral-300 no-underline hover:opacity-70 transition-opacity ease-in-out duration-500" href="#">LINKEDIN</a>
+<a class="font-['Manrope'] text-[12px] font-medium tracking-widest uppercase text-neutral-700 dark:text-neutral-300 no-underline hover:opacity-70 transition-opacity ease-in-out duration-500" href="#">SOURCE</a>
+</div>
+</div>
+</footer>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-6 pb-6 pt-2 md:hidden bg-stone-50 dark:bg-stone-950 border-t border-stone-200/15 dark:border-stone-800/15 z-50">
+<a class="flex flex-col items-center justify-center text-stone-900 dark:text-stone-50 border-t-2 border-stone-900 dark:border-stone-50 pt-2 transition-all duration-300 ease-in-out" href="/">
+<span class="material-symbols-outlined" data-icon="home_storage">home_storage</span>
+<span class="font-sans manrope uppercase tracking-[0.1em] text-[10px]">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-600 pt-2 transition-all duration-300 ease-in-out hover:bg-stone-100 dark:hover:bg-stone-900" href="/projetos">
+<span class="material-symbols-outlined" data-icon="grid_view">grid_view</span>
+<span class="font-sans manrope uppercase tracking-[0.1em] text-[10px]">Projetos</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-600 pt-2 transition-all duration-300 ease-in-out hover:bg-stone-100 dark:hover:bg-stone-900" href="/experiencia">
+<span class="material-symbols-outlined" data-icon="work_history">work_history</span>
+<span class="font-sans manrope uppercase tracking-[0.1em] text-[10px]">Experiência</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-600 pt-2 transition-all duration-300 ease-in-out hover:bg-stone-100 dark:hover:bg-stone-900" href="/mentoria">
+<span class="material-symbols-outlined" data-icon="record_voice_over">record_voice_over</span>
+<span class="font-sans manrope uppercase tracking-[0.1em] text-[10px]">Mentoria</span>
+</a>
+</nav>
+</body></html>

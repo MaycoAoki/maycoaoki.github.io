@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed": "#3f3f3f",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-fixed": "#403f3f",
+                        "tertiary-fixed-dim": "#c2def0",
+                        "on-error-container": "#752121",
+                        "on-secondary": "#fbf8f8",
+                        "surface-bright": "#f9f9f9",
+                        "tertiary-dim": "#3c5666",
+                        "tertiary-container": "#d0ecff",
+                        "error-container": "#fe8983",
+                        "primary": "#5f5e5e",
+                        "on-tertiary-container": "#3e5868",
+                        "error-dim": "#4e0309",
+                        "on-surface": "#2d3435",
+                        "secondary-container": "#e4e2e2",
+                        "secondary-fixed": "#e4e2e2",
+                        "on-error": "#fff7f6",
+                        "primary-dim": "#535252",
+                        "outline-variant": "#adb3b4",
+                        "on-background": "#2d3435",
+                        "tertiary-fixed": "#d0ecff",
+                        "outline": "#757c7d",
+                        "surface-variant": "#dde4e5",
+                        "on-tertiary": "#f4faff",
+                        "tertiary": "#486272",
+                        "primary-fixed-dim": "#d6d4d3",
+                        "on-primary": "#faf7f6",
+                        "on-surface-variant": "#5a6061",
+                        "secondary-fixed-dim": "#d6d4d3",
+                        "primary-container": "#e5e2e1",
+                        "on-primary-container": "#525151",
+                        "surface-container-low": "#f2f4f4",
+                        "primary-fixed": "#e5e2e1",
+                        "surface": "#f9f9f9",
+                        "inverse-surface": "#0c0f0f",
+                        "surface-tint": "#5f5e5e",
+                        "inverse-on-surface": "#9c9d9d",
+                        "on-tertiary-fixed-variant": "#486272",
+                        "error": "#9f403d",
+                        "inverse-primary": "#ffffff",
+                        "surface-container-high": "#e4e9ea",
+                        "surface-dim": "#d4dbdd",
+                        "on-secondary-fixed-variant": "#5c5b5b",
+                        "background": "#f9f9f9",
+                        "surface-container-highest": "#dde4e5",
+                        "surface-container": "#ebeeef",
+                        "on-secondary-container": "#525252",
+                        "secondary-dim": "#535353",
+                        "on-primary-fixed-variant": "#5c5b5b",
+                        "secondary": "#5f5f5f",
+                        "on-tertiary-fixed": "#2c4655"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Newsreader"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"],
+                        "newsreader": ["Newsreader", "serif"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; background-color: #f9f9f9; color: #2d3435; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+        .font-newsreader { font-family: 'Newsreader', serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar (from COMPONENTS_21) -->
+<header class="fixed top-0 w-full z-50 bg-stone-50/80 dark:bg-stone-950/80 backdrop-blur-xl shadow-[0_40px_60px_-15px_rgba(45,52,53,0.04)]">
+<div class="flex justify-between items-center px-8 py-6 w-full max-w-screen-2xl mx-auto">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-stone-800 dark:text-stone-200" data-icon="menu">menu</span>
+<span class="text-xl font-serif newsreader tracking-widest text-stone-900 dark:text-stone-50">ARCHITECT.LOG</span>
+</div>
+<nav class="hidden lg:flex gap-10 items-center">
+<a class="text-stone-500 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-50 transition-colors duration-300 font-medium font-['Manrope'] text-[12px] uppercase tracking-widest" href="index.html">Home</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-50 transition-colors duration-300 font-medium font-['Manrope'] text-[12px] uppercase tracking-widest" href="sobre.html">Sobre</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-50 transition-colors duration-300 font-medium font-['Manrope'] text-[12px] uppercase tracking-widest" href="projetos.html">Projetos</a>
+<a class="text-stone-900 dark:text-stone-50 font-bold font-['Manrope'] text-[12px] uppercase tracking-widest" href="experiencia.html">Experiência</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-50 transition-colors duration-300 font-medium font-['Manrope'] text-[12px] uppercase tracking-widest" href="mentoria.html">Mentoria</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-50 transition-colors duration-300 font-medium font-['Manrope'] text-[12px] uppercase tracking-widest" href="contato.html">Contato</a>
+</nav>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-stone-800 dark:text-stone-200 scale-95 duration-200 opacity-80 cursor-pointer" data-icon="search">search</span>
+</div>
+</div>
+</header>
+<main class="pt-32 pb-24 max-w-7xl mx-auto px-8">
+<!-- Hero Section / Title -->
+<section class="mb-24 grid grid-cols-1 md:grid-cols-12 gap-8 items-end">
+<div class="md:col-span-8">
+<h1 class="text-[3.5rem] leading-tight font-newsreader italic font-medium tracking-tight text-on-surface">
+                    Experiência Profissional
+                </h1>
+<p class="mt-6 text-lg text-on-surface-variant font-body max-w-2xl leading-relaxed">
+                    Uma trajetória focada na construção de arquiteturas escaláveis e experiências digitais refinadas. De liderança técnica a integrações complexas.
+                </p>
+</div>
+<div class="md:col-span-4 flex justify-end">
+<div class="text-right">
+<span class="block text-[0.75rem] font-bold tracking-[0.2em] uppercase text-outline mb-1">Status atual</span>
+<span class="text-sm font-semibold text-primary">Disponível para novos desafios</span>
+</div>
+</div>
+</section>
+<!-- Timeline / Experience List -->
+<section class="space-y-32">
+<!-- Revista Exato -->
+<div class="group relative grid grid-cols-1 md:grid-cols-12 gap-8">
+<div class="md:col-span-3">
+<span class="text-[0.75rem] font-bold tracking-[0.15em] uppercase text-outline-variant">Fev 2025 — Abr 2026</span>
+</div>
+<div class="md:col-span-9 border-l border-outline-variant/15 pl-8 md:pl-16 relative">
+<div class="absolute -left-[5px] top-0 w-[9px] h-[9px] bg-primary"></div>
+<h2 class="text-[2rem] font-newsreader font-bold mb-4 italic text-on-surface">Revista Exato</h2>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="px-3 py-1 bg-surface-container-highest text-[10px] font-bold tracking-widest uppercase text-on-surface-variant">Liderança Técnica</span>
+<span class="px-3 py-1 bg-surface-container-highest text-[10px] font-bold tracking-widest uppercase text-on-surface-variant">Laravel</span>
+<span class="px-3 py-1 bg-surface-container-highest text-[10px] font-bold tracking-widest uppercase text-on-surface-variant">Next.js</span>
+<span class="px-3 py-1 bg-surface-container-highest text-[10px] font-bold tracking-widest uppercase text-on-surface-variant">Stripe</span>
+</div>
+<p class="text-on-surface-variant leading-relaxed font-body max-w-3xl">
+                        Responsável pela direção técnica de produtos digitais, implementando soluções robustas com Laravel no ecossistema backend e Next.js para interfaces de alta performance. Gestão completa de fluxos de pagamento e assinaturas via Stripe.
+                    </p>
+</div>
+</div>
+<!-- Revenda Mais -->
+<div class="group relative grid grid-cols-1 md:grid-cols-12 gap-8">
+<div class="md:col-span-3">
+<span class="text-[0.75rem] font-bold tracking-[0.15em] uppercase text-outline-variant">Abr 2024 — Set 2024</span>
+</div>
+<div class="md:col-span-9 border-l border-outline-variant/15 pl-8 md:pl-16 relative">
+<div class="absolute -left-[5px] top-0 w-[9px] h-[9px] bg-outline-variant"></div>
+<h2 class="text-[2rem] font-newsreader font-bold mb-4 italic text-on-surface">Revenda Mais</h2>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="px-3 py-1 bg-surface-container-highest text-[10px] font-bold tracking-widest uppercase text-on-surface-variant">Laravel</span>
+<span class="px-3 py-1 bg-surface-container-highest text-[10px] font-bold tracking-widest uppercase text-on-surface-variant">React.js</span>
+</div>
+<p class="text-on-surface-variant leading-relaxed font-body max-w-3xl">
+                        Atuação no desenvolvimento de sistemas de gestão automotiva, utilizando stack moderna para otimização de processos internos e experiência do usuário final.
+                    </p>
+</div>
+</div>
+<!-- Codesign -->
+<div class="group relative grid grid-cols-1 md:grid-cols-12 gap-8">
+<div class="md:col-span-3">
+<span class="text-[0.75rem] font-bold tracking-[0.15em] uppercase text-outline-variant">Mai 2022 — Dez 2023</span>
+</div>
+<div class="md:col-span-9 border-l border-outline-variant/15 pl-8 md:pl-16 relative">
+<div class="absolute -left-[5px] top-0 w-[9px] h-[9px] bg-outline-variant"></div>
+<h2 class="text-[2rem] font-newsreader font-bold mb-4 italic text-on-surface">Codesign</h2>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="px-3 py-1 bg-surface-container-highest text-[10px] font-bold tracking-widest uppercase text-on-surface-variant">Scrum</span>
+<span class="px-3 py-1 bg-surface-container-highest text-[10px] font-bold tracking-widest uppercase text-on-surface-variant">Laravel</span>
+<span class="px-3 py-1 bg-surface-container-highest text-[10px] font-bold tracking-widest uppercase text-on-surface-variant">React.js</span>
+<span class="px-3 py-1 bg-surface-container-highest text-[10px] font-bold tracking-widest uppercase text-on-surface-variant">AngularJS</span>
+</div>
+<p class="text-on-surface-variant leading-relaxed font-body max-w-3xl">
+                        Imersão em ambientes ágeis utilizando metodologia Scrum. Manutenção e evolução de legados em AngularJS enquanto migrava e construía novas funcionalidades com React.js e Laravel.
+                    </p>
+</div>
+</div>
+<!-- Econet Editora -->
+<div class="group relative grid grid-cols-1 md:grid-cols-12 gap-8">
+<div class="md:col-span-3">
+<span class="text-[0.75rem] font-bold tracking-[0.15em] uppercase text-outline-variant">Mai 2021 — Abr 2022</span>
+</div>
+<div class="md:col-span-9 border-l border-outline-variant/15 pl-8 md:pl-16 relative">
+<div class="absolute -left-[5px] top-0 w-[9px] h-[9px] bg-outline-variant"></div>
+<h2 class="text-[2rem] font-newsreader font-bold mb-4 italic text-on-surface">Econet Editora</h2>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="px-3 py-1 bg-surface-container-highest text-[10px] font-bold tracking-widest uppercase text-on-surface-variant">Backend Laravel</span>
+<span class="px-3 py-1 bg-surface-container-highest text-[10px] font-bold tracking-widest uppercase text-on-surface-variant">APIs REST</span>
+<span class="px-3 py-1 bg-surface-container-highest text-[10px] font-bold tracking-widest uppercase text-on-surface-variant">Vue.js</span>
+<span class="px-3 py-1 bg-surface-container-highest text-[10px] font-bold tracking-widest uppercase text-on-surface-variant">React.js</span>
+</div>
+<p class="text-on-surface-variant leading-relaxed font-body max-w-3xl">
+                        Foco no desenvolvimento backend e arquitetura de APIs RESTful para suporte a múltiplos frontends em Vue e React, garantindo integridade de dados e performance para uma base sólida de usuários.
+                    </p>
+</div>
+</div>
+<!-- Summarized Experience -->
+<div class="bg-surface-container-low p-12 mt-16">
+<h3 class="text-[0.75rem] font-bold tracking-[0.2em] uppercase text-outline mb-12">Experiências Anteriores</h3>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+<div>
+<h4 class="font-newsreader italic text-xl font-bold">WebControl</h4>
+<span class="text-[10px] font-bold tracking-widest uppercase opacity-60">Fullstack Dev</span>
+</div>
+<div>
+<h4 class="font-newsreader italic text-xl font-bold">Tuxon</h4>
+<span class="text-[10px] font-bold tracking-widest uppercase opacity-60">Software Engineer</span>
+</div>
+<div>
+<h4 class="font-newsreader italic text-xl font-bold">Bomja</h4>
+<span class="text-[10px] font-bold tracking-widest uppercase opacity-60">Web Developer</span>
+</div>
+<div>
+<h4 class="font-newsreader italic text-xl font-bold">NEXTEM</h4>
+<span class="text-[10px] font-bold tracking-widest uppercase opacity-60">Backend Specialist</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Quote / Decorative Element -->
+<section class="mt-40 border-t border-outline-variant/10 pt-20">
+<div class="max-w-4xl">
+<blockquote class="text-[2.5rem] font-newsreader italic text-on-surface leading-tight opacity-90">
+                    "Arquitetura de software não é sobre construir código, é sobre construir fundações sólidas que permitam o crescimento sustentável de ideias complexas."
+                </blockquote>
+<cite class="block mt-8 text-[0.75rem] font-bold tracking-widest uppercase text-primary">— Mayco Aoki, 2024</cite>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (from COMPONENTS_21) -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-6 pb-6 pt-2 bg-stone-50 dark:bg-stone-950 border-t border-stone-200/15 dark:border-stone-800/15 z-50 md:hidden">
+<a class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-600 pt-2 transition-all duration-300 ease-in-out hover:bg-stone-100 dark:hover:bg-stone-900" href="index.html">
+<span class="material-symbols-outlined mb-1" data-icon="home_storage">home_storage</span>
+<span class="font-sans manrope uppercase tracking-[0.1em] text-[10px]">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-600 pt-2 transition-all duration-300 ease-in-out hover:bg-stone-100 dark:hover:bg-stone-900" href="projetos.html">
+<span class="material-symbols-outlined mb-1" data-icon="grid_view">grid_view</span>
+<span class="font-sans manrope uppercase tracking-[0.1em] text-[10px]">Projetos</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-900 dark:text-stone-50 border-t-2 border-stone-900 dark:border-stone-50 pt-2 transition-all duration-300 ease-in-out hover:bg-stone-100 dark:hover:bg-stone-900" href="experiencia.html">
+<span class="material-symbols-outlined mb-1" data-icon="work_history">work_history</span>
+<span class="font-sans manrope uppercase tracking-[0.1em] text-[10px]">Experiência</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-600 pt-2 transition-all duration-300 ease-in-out hover:bg-stone-100 dark:hover:bg-stone-900" href="mentoria.html">
+<span class="material-symbols-outlined mb-1" data-icon="record_voice_over">record_voice_over</span>
+<span class="font-sans manrope uppercase tracking-[0.1em] text-[10px]">Mentoria</span>
+</a>
+</nav>
+<!-- Footer -->
+<footer class="w-full py-16 bg-[#ebeeef]">
+<div class="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="text-lg font-['Newsreader'] italic text-neutral-700">
+                Mayco Aoki / Developer Portfolio
+            </div>
+<div class="font-['Manrope'] text-[12px] font-medium tracking-widest uppercase text-neutral-700 flex gap-12">
+<a class="hover:opacity-70 transition-opacity ease-in-out duration-500" href="https://github.com">GITHUB</a>
+<a class="hover:opacity-70 transition-opacity ease-in-out duration-500" href="https://linkedin.com">LINKEDIN</a>
+<a class="hover:opacity-70 transition-opacity ease-in-out duration-500" href="#">SOURCE</a>
+</div>
+<div class="font-['Manrope'] text-[12px] font-medium tracking-widest uppercase text-neutral-700 opacity-50">
+                © 2024 ENGINEER_PORTFOLIO. BUILT FOR SCALE.
+            </div>
+</div>
+</footer>
+</body></html>

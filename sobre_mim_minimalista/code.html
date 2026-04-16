@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,700;1,400;1,500&amp;family=Manrope:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-fixed": "#3f3f3f",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary-fixed": "#403f3f",
+                    "tertiary-fixed-dim": "#c2def0",
+                    "on-error-container": "#752121",
+                    "on-secondary": "#fbf8f8",
+                    "surface-bright": "#f9f9f9",
+                    "tertiary-dim": "#3c5666",
+                    "tertiary-container": "#d0ecff",
+                    "error-container": "#fe8983",
+                    "primary": "#5f5e5e",
+                    "on-tertiary-container": "#3e5868",
+                    "error-dim": "#4e0309",
+                    "on-surface": "#2d3435",
+                    "secondary-container": "#e4e2e2",
+                    "secondary-fixed": "#e4e2e2",
+                    "on-error": "#fff7f6",
+                    "primary-dim": "#535252",
+                    "outline-variant": "#adb3b4",
+                    "on-background": "#2d3435",
+                    "tertiary-fixed": "#d0ecff",
+                    "outline": "#757c7d",
+                    "surface-variant": "#dde4e5",
+                    "on-tertiary": "#f4faff",
+                    "tertiary": "#486272",
+                    "primary-fixed-dim": "#d6d4d3",
+                    "on-primary": "#faf7f6",
+                    "on-surface-variant": "#5a6061",
+                    "secondary-fixed-dim": "#d6d4d3",
+                    "primary-container": "#e5e2e1",
+                    "on-primary-container": "#525151",
+                    "surface-container-low": "#f2f4f4",
+                    "primary-fixed": "#e5e2e1",
+                    "surface": "#f9f9f9",
+                    "inverse-surface": "#0c0f0f",
+                    "surface-tint": "#5f5e5e",
+                    "inverse-on-surface": "#9c9d9d",
+                    "on-tertiary-fixed-variant": "#486272",
+                    "error": "#9f403d",
+                    "inverse-primary": "#ffffff",
+                    "surface-container-high": "#e4e9ea",
+                    "surface-dim": "#d4dbdd",
+                    "on-secondary-fixed-variant": "#5c5b5b",
+                    "background": "#f9f9f9",
+                    "surface-container-highest": "#dde4e5",
+                    "surface-container": "#ebeeef",
+                    "on-secondary-container": "#525252",
+                    "secondary-dim": "#535353",
+                    "on-primary-fixed-variant": "#5c5b5b",
+                    "secondary": "#5f5f5f",
+                    "on-tertiary-fixed": "#2c4655"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {},
+            "fontFamily": {
+                    "headline": ["Newsreader", "serif"],
+                    "body": ["Manrope", "sans-serif"],
+                    "label": ["Manrope", "sans-serif"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Manrope', sans-serif; background-color: #f9f9f9; color: #2d3435; }
+        .serif-headline { font-family: 'Newsreader', serif; }
+        .newsreader { font-family: 'Newsreader', serif; }
+        .manrope { font-family: 'Manrope', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar (Updated with shared component style) -->
+<header class="fixed top-0 w-full z-50 bg-stone-50/80 dark:bg-stone-950/80 backdrop-blur-xl shadow-[0_40px_60px_-15px_rgba(45,52,53,0.04)]">
+<div class="flex justify-between items-center px-8 py-6 w-full max-w-screen-2xl mx-auto">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-stone-800 dark:text-stone-200" data-icon="menu">menu</span>
+<span class="text-xl font-serif newsreader tracking-widest text-stone-900 dark:text-stone-50">ARCHITECT.LOG</span>
+</div>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="text-stone-500 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-50 transition-colors duration-300 font-label text-[12px] tracking-widest uppercase" href="#">Home</a>
+<a class="text-stone-900 dark:text-stone-50 font-bold font-label text-[12px] tracking-widest uppercase" href="#">Sobre</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-50 transition-colors duration-300 font-label text-[12px] tracking-widest uppercase" href="#">Projetos</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-50 transition-colors duration-300 font-label text-[12px] tracking-widest uppercase" href="#">Experiência</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-50 transition-colors duration-300 font-label text-[12px] tracking-widest uppercase" href="#">Mentoria</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-50 transition-colors duration-300 font-label text-[12px] tracking-widest uppercase" href="#">Contato</a>
+</nav>
+<div class="flex items-center">
+<span class="material-symbols-outlined text-stone-800 dark:text-stone-200 cursor-pointer" data-icon="search">search</span>
+</div>
+</div>
+</header>
+<main class="pt-32 pb-32 px-8 max-w-7xl mx-auto">
+<!-- Hero Section -->
+<section class="mb-24 md:grid md:grid-cols-12 md:gap-12 items-end">
+<div class="md:col-span-7">
+<p class="font-label text-[0.75rem] uppercase tracking-[0.2em] text-on-surface-variant mb-4">Software Architect &amp; Full Stack Engineer</p>
+<h1 class="text-[3.5rem] md:text-[5rem] serif-headline leading-[1.1] italic font-medium tracking-tighter mb-8">
+                    Mayco Aoki
+                </h1>
+</div>
+<div class="md:col-span-5">
+<div class="aspect-[4/5] bg-surface-container overflow-hidden">
+<img alt="Mayco Aoki Professional Portrait" class="w-full h-full object-cover grayscale hover:scale-105 transition-transform duration-700" data-alt="Professional monochrome portrait of a man in a modern office environment with soft natural lighting and minimalist aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJas0Tytb-RpjmdEbAvA7BqUPJuGoWEueJcjD3yvQ-vb9I1dSy5L2hYELF2X7DsW-VwByog9lzyeDchUTlq_0gQwaeAeb-dcbSkNrdBjvdj7HdJLQFWiHARlOy5Tq1EpwRZaHHMfT1fsbEUJs65-VfN57wT7q-pWVTxAkbxtigL8iOAVG7TzGLWDXll7njLOmPl50E-4Im9V7qycwPsVzCNpauKUeC34Vyep-Wk2TksoJdi-0JpEB620Y65o5CUbczt3lYMtnk6Pg"/>
+</div>
+</div>
+</section>
+<!-- Biography Section -->
+<section class="mb-32 md:grid md:grid-cols-12 md:gap-12">
+<div class="md:col-span-4 mb-8 md:mb-0">
+<h2 class="serif-headline text-2xl italic border-l-2 border-primary pl-6">Biografia</h2>
+</div>
+<div class="md:col-span-8">
+<p class="font-body text-lg leading-relaxed text-on-surface-variant mb-6">
+                    Engenheiro de Software Full Stack com mais de 6 anos de experiência no desenvolvimento de soluções escaláveis e de alta performance. Especialista em backend com forte atuação em PHP/Laravel, focado na criação de arquiteturas robustas que suportam o crescimento contínuo de produtos digitais.
+                </p>
+<p class="font-body text-lg leading-relaxed text-on-surface-variant">
+                    Minha abordagem combina o rigor técnico da engenharia com a agilidade necessária para o mercado tecnológico atual, sempre priorizando a qualidade do código e a experiência final do usuário.
+                </p>
+</div>
+</section>
+<!-- Technical Competencies Section (Bento Grid Style) -->
+<section class="mb-32">
+<div class="mb-12">
+<h2 class="serif-headline text-2xl italic mb-2">Competências Técnicas</h2>
+<div class="w-24 h-px bg-outline-variant opacity-20"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-1">
+<!-- Backend -->
+<div class="bg-surface-container-low p-8 flex flex-col justify-between aspect-square md:aspect-auto h-full">
+<div>
+<span class="material-symbols-outlined text-primary mb-6" data-icon="terminal">terminal</span>
+<h3 class="font-label text-[0.75rem] uppercase tracking-widest text-on-surface mb-4">Backend</h3>
+<ul class="space-y-2 text-on-surface-variant text-sm font-medium">
+<li>PHP / Laravel</li>
+<li>Java</li>
+<li>C#</li>
+<li>Node.js</li>
+</ul>
+</div>
+</div>
+<!-- Frontend -->
+<div class="bg-surface-container p-8 flex flex-col justify-between aspect-square md:aspect-auto h-full">
+<div>
+<span class="material-symbols-outlined text-primary mb-6" data-icon="web">web</span>
+<h3 class="font-label text-[0.75rem] uppercase tracking-widest text-on-surface mb-4">Frontend</h3>
+<ul class="space-y-2 text-on-surface-variant text-sm font-medium">
+<li>React.js / Next.js</li>
+<li>Vue.js</li>
+<li>AngularJS</li>
+<li>TypeScript</li>
+</ul>
+</div>
+</div>
+<!-- Architecture -->
+<div class="bg-surface-container-high p-8 flex flex-col justify-between aspect-square md:aspect-auto h-full">
+<div>
+<span class="material-symbols-outlined text-primary mb-6" data-icon="account_tree">account_tree</span>
+<h3 class="font-label text-[0.75rem] uppercase tracking-widest text-on-surface mb-4">Arquitetura</h3>
+<ul class="space-y-2 text-on-surface-variant text-sm font-medium">
+<li>SOLID Principles</li>
+<li>Clean Code</li>
+<li>DDD (Domain Driven Design)</li>
+</ul>
+</div>
+</div>
+<!-- Infra/DevOps -->
+<div class="bg-surface-container-highest p-8 flex flex-col justify-between aspect-square md:aspect-auto h-full">
+<div>
+<span class="material-symbols-outlined text-primary mb-6" data-icon="cloud">cloud</span>
+<h3 class="font-label text-[0.75rem] uppercase tracking-widest text-on-surface mb-4">Infra / DevOps</h3>
+<ul class="space-y-2 text-on-surface-variant text-sm font-medium">
+<li>Docker</li>
+<li>AWS</li>
+<li>GitHub Actions</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- Academic Background -->
+<section class="mb-32 md:grid md:grid-cols-12 md:gap-12 py-24 bg-surface-container-low px-8">
+<div class="md:col-span-4 mb-8 md:mb-0">
+<h2 class="serif-headline text-2xl italic">Formação Acadêmica</h2>
+</div>
+<div class="md:col-span-8">
+<div class="group cursor-default">
+<span class="font-label text-[0.7rem] uppercase tracking-[0.2em] text-outline mb-2 block">2011 – 2019</span>
+<h3 class="font-headline text-3xl font-medium mb-2 group-hover:italic transition-all duration-300">Universidade Federal do Amazonas</h3>
+<p class="font-body text-lg text-on-surface-variant">Bacharelado em Engenharia de Software</p>
+</div>
+</div>
+</section>
+<!-- Call to Action -->
+<section class="mb-12 text-center py-24 border-y border-outline-variant/15">
+<h2 class="serif-headline text-[3rem] italic mb-12 tracking-tighter">Vamos construir algo <br/>excepcional juntos.</h2>
+<a class="inline-block bg-primary text-on-primary px-12 py-5 font-label text-xs tracking-widest uppercase hover:bg-primary-dim transition-colors duration-300" href="mailto:contact@maycoaoki.com">
+                Entrar em Contato
+            </a>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#ebeeef] dark:bg-[#141414] w-full py-16">
+<div class="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex flex-col items-center md:items-start gap-4">
+<span class="text-lg font-headline italic text-neutral-700 dark:text-neutral-300">ARCHITECT.LOG</span>
+<p class="font-label text-[12px] font-medium tracking-widest uppercase text-neutral-700 dark:text-neutral-300">© 2024 ENGINEER_PORTFOLIO. BUILT FOR SCALE.</p>
+</div>
+<div class="flex gap-12">
+<a class="font-label text-[12px] font-medium tracking-widest uppercase text-neutral-700 dark:text-neutral-300 no-underline hover:opacity-70 transition-opacity ease-in-out duration-500" href="#">GITHUB</a>
+<a class="font-label text-[12px] font-medium tracking-widest uppercase text-neutral-700 dark:text-neutral-300 underline underline-offset-4 hover:opacity-70 transition-opacity ease-in-out duration-500" href="#">LINKEDIN</a>
+<a class="font-label text-[12px] font-medium tracking-widest uppercase text-neutral-700 dark:text-neutral-300 no-underline hover:opacity-70 transition-opacity ease-in-out duration-500" href="#">SOURCE</a>
+</div>
+</div>
+</footer>
+<!-- BottomNavBar (Mobile Only) - Updated with shared component style -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center px-6 pb-6 pt-2 bg-stone-50 dark:bg-stone-950 border-t border-stone-200/15 dark:border-stone-800/15 z-50">
+<a class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-600 pt-2 transition-all duration-300 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="home_storage">home_storage</span>
+<span class="font-sans manrope uppercase tracking-[0.1em] text-[10px]">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-900 dark:text-stone-50 border-t-2 border-stone-900 dark:border-stone-50 pt-2 transition-all duration-300 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-sans manrope uppercase tracking-[0.1em] text-[10px]">Sobre</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-600 pt-2 transition-all duration-300 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="grid_view">grid_view</span>
+<span class="font-sans manrope uppercase tracking-[0.1em] text-[10px]">Projetos</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-600 pt-2 transition-all duration-300 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="work_history">work_history</span>
+<span class="font-sans manrope uppercase tracking-[0.1em] text-[10px]">Exp.</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-600 pt-2 transition-all duration-300 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="record_voice_over">record_voice_over</span>
+<span class="font-sans manrope uppercase tracking-[0.1em] text-[10px]">Mentoria</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-600 pt-2 transition-all duration-300 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="mail">mail</span>
+<span class="font-sans manrope uppercase tracking-[0.1em] text-[10px]">Contato</span>
+</a>
+</nav>
+</body></html>

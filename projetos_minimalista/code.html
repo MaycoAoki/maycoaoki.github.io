@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-fixed-variant": "#5c5b5b",
+                    "primary-fixed": "#e5e2e1",
+                    "outline": "#757c7d",
+                    "inverse-on-surface": "#9c9d9d",
+                    "surface-container-low": "#f2f4f4",
+                    "primary-fixed-dim": "#d6d4d3",
+                    "on-error": "#fff7f6",
+                    "on-surface-variant": "#5a6061",
+                    "on-secondary-fixed": "#3f3f3f",
+                    "secondary-fixed": "#e4e2e2",
+                    "primary": "#5f5e5e",
+                    "on-secondary-fixed-variant": "#5c5b5b",
+                    "tertiary-dim": "#3c5666",
+                    "background": "#f9f9f9",
+                    "surface-variant": "#dde4e5",
+                    "surface-bright": "#f9f9f9",
+                    "primary-container": "#e5e2e1",
+                    "surface-tint": "#5f5e5e",
+                    "on-surface": "#2d3435",
+                    "on-tertiary-fixed-variant": "#486272",
+                    "on-tertiary-fixed": "#2c4655",
+                    "on-primary": "#faf7f6",
+                    "tertiary-fixed-dim": "#c2def0",
+                    "inverse-primary": "#ffffff",
+                    "on-primary-fixed": "#403f3f",
+                    "error-dim": "#4e0309",
+                    "secondary-fixed-dim": "#d6d4d3",
+                    "tertiary-fixed": "#d0ecff",
+                    "primary-dim": "#535252",
+                    "secondary": "#5f5f5f",
+                    "surface-container": "#ebeeef",
+                    "tertiary-container": "#d0ecff",
+                    "on-tertiary": "#f4faff",
+                    "secondary-container": "#e4e2e2",
+                    "on-secondary-container": "#525252",
+                    "outline-variant": "#adb3b4",
+                    "surface-container-high": "#e4e9ea",
+                    "surface-container-lowest": "#ffffff",
+                    "on-error-container": "#752121",
+                    "inverse-surface": "#0c0f0f",
+                    "on-tertiary-container": "#3e5868",
+                    "surface-container-highest": "#dde4e5",
+                    "surface": "#f9f9f9",
+                    "secondary-dim": "#535353",
+                    "on-secondary": "#fbf8f8",
+                    "on-background": "#2d3435",
+                    "on-primary-container": "#525151",
+                    "tertiary": "#486272",
+                    "error-container": "#fe8983",
+                    "surface-dim": "#d4dbdd",
+                    "error": "#9f403d"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0px",
+                    "lg": "0px",
+                    "xl": "0px",
+                    "full": "9999px"
+            },
+            "spacing": {},
+            "fontFamily": {
+                    "headline": [
+                            "Newsreader"
+                    ],
+                    "body": [
+                            "Manrope"
+                    ],
+                    "label": [
+                            "Manrope"
+                    ]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Manrope', sans-serif;
+            background-color: #f9f9f9;
+            color: #2d3435;
+            -webkit-font-smoothing: antialiased;
+        }
+        .serif-headline {
+            font-family: 'Newsreader', serif;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface">
+<!-- TopAppBar (from COMPONENTS_21) -->
+<header class="bg-stone-50/80 dark:bg-stone-950/80 backdrop-blur-xl fixed top-0 w-full z-50 shadow-[0_40px_60px_-15px_rgba(45,52,53,0.04)]">
+<div class="flex justify-between items-center px-8 py-6 w-full max-w-screen-2xl mx-auto">
+<div class="flex items-center gap-8">
+<span class="material-symbols-outlined cursor-pointer text-stone-800 dark:text-stone-200 active:scale-95 duration-200 active:opacity-80" data-icon="menu">menu</span>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-stone-900 dark:text-stone-50 font-bold font-serif italic text-lg transition-colors duration-300" href="/home">Home</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-50 transition-colors duration-300 font-sans uppercase tracking-[0.1em] text-xs" href="/sobre">Sobre</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-50 transition-colors duration-300 font-sans uppercase tracking-[0.1em] text-xs" href="/projetos">Projetos</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-50 transition-colors duration-300 font-sans uppercase tracking-[0.1em] text-xs" href="/experiencia">Experiência</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-50 transition-colors duration-300 font-sans uppercase tracking-[0.1em] text-xs" href="/mentoria">Mentoria</a>
+</nav>
+</div>
+<div class="text-xl font-serif italic tracking-widest text-stone-900 dark:text-stone-50">ARCHITECT.LOG</div>
+<div class="flex items-center gap-4">
+<a class="hidden md:block text-stone-500 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-50 transition-colors duration-300 font-sans uppercase tracking-[0.1em] text-xs" href="/contato">Contato</a>
+<span class="material-symbols-outlined cursor-pointer text-stone-800 dark:text-stone-200 active:scale-95 duration-200 active:opacity-80" data-icon="search">search</span>
+</div>
+</div>
+</header>
+<main class="pt-32 pb-40">
+<!-- Hero Section -->
+<section class="max-w-[1440px] mx-auto px-8 mb-32">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-end">
+<div class="md:col-span-8">
+<h1 class="serif-headline text-[3.5rem] md:text-[5rem] leading-[1.1] italic font-light -tracking-widest">
+                    Selected<br/>Engineering<br/>Practices.
+                </h1>
+</div>
+<div class="md:col-span-4 pb-4">
+<p class="font-body text-on-surface-variant text-lg leading-relaxed max-w-sm">
+                    A curation of architectural explorations in backend systems, distributed order processing, and payment infrastructure.
+                </p>
+</div>
+</div>
+</section>
+<!-- Projects Grid: Asymmetric Layout -->
+<section class="max-w-[1440px] mx-auto px-8 space-y-40">
+<!-- Project 1: Large Left-aligned -->
+<article class="grid grid-cols-1 md:grid-cols-12 gap-12 items-start">
+<div class="md:col-span-8 group">
+<div class="bg-surface-container-low aspect-[16/9] mb-8 overflow-hidden">
+<img class="w-full h-full object-cover grayscale opacity-90 group-hover:grayscale-0 transition-all duration-700" data-alt="Minimalist abstract representation of digital payment flow with clean geometric lines and soft grey shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrYaBaitbWTHhkEOwvDxaF3Ojmmhlet_0ptGOBl4k7Zz26k0NVFD-BnV0IM_1uMKJtE_r_riRo9Ryt7EkRkgisHrlgsUtWHqn595yPL_ArbzTlcftxbpw0Tisdx2TSb-6dzKHZFYflRaw4NEmn2pK0t3J9QfPAKuAItHFQQ8F3xUzfHbTn_JJMxMm4lTuB6KnITi1YVHA9t5J13mtxJ07PrGVsSkQKTQ_4xi0i0Zm9WvGv8Khnw4Bq1V4CkiKycKCykk9tIKvCRFY"/>
+</div>
+<div class="flex flex-col md:flex-row justify-between items-baseline gap-4 border-b border-outline-variant/20 pb-4">
+<h2 class="serif-headline text-3xl italic">payment-commerce-platform</h2>
+<span class="font-label text-[10px] uppercase tracking-[0.2em] text-on-surface-variant">01 / ARCHITECTURE</span>
+</div>
+<div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-8">
+<p class="font-body text-on-surface-variant leading-relaxed">
+                        A robust e-commerce payment processing system engineered with Spring Boot 3.x. The implementation strictly adheres to Hexagonal Architecture, ensuring complete decoupling of core business logic from Stripe's external API integration.
+                    </p>
+<div class="flex flex-wrap gap-2 content-start">
+<span class="px-3 py-1 bg-surface-container-highest text-[10px] font-label uppercase tracking-widest text-on-surface-variant">Java</span>
+<span class="px-3 py-1 bg-surface-container-highest text-[10px] font-label uppercase tracking-widest text-on-surface-variant">Spring Boot 3</span>
+<span class="px-3 py-1 bg-surface-container-highest text-[10px] font-label uppercase tracking-widest text-on-surface-variant">Stripe API</span>
+</div>
+</div>
+</div>
+</article>
+<!-- Project 2: Shifted Right -->
+<article class="grid grid-cols-1 md:grid-cols-12 gap-12 items-start">
+<div class="md:col-start-5 md:col-span-8 group">
+<div class="bg-surface-container aspect-[4/3] mb-8 overflow-hidden">
+<img class="w-full h-full object-cover grayscale opacity-90 group-hover:grayscale-0 transition-all duration-700" data-alt="Visual metaphor for event-driven microservices showing interconnected ethereal nodes in a vast white digital space" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWDd6y4_TopbEhnJcx2mIkE1buapyF_2o9IyG04k9pMFoSRGYSjiT1mSRauRN8_IV0yH5qn0yQAxEWuD7KgjDPHXQIrU5LiXOdwmk33wSBf9MXRZGC7kOGZIeO2ihGLO1LMeMcJcdAuHTB8lC9sTaEuD5cPS8cgKI4h86so-kGy-dqzQtpoGL_qrhwY-Y2QKQ718h2SEaWJlKnj9XxsSzV_HECk41pCGFDWGP3zz50YeHYdh1Z24KT5F3Zh59qNR4o9OiS1tfaHHY"/>
+</div>
+<div class="flex flex-col md:flex-row justify-between items-baseline gap-4 border-b border-outline-variant/20 pb-4">
+<h2 class="serif-headline text-3xl italic">order-processing-platform</h2>
+<span class="font-label text-[10px] uppercase tracking-[0.2em] text-on-surface-variant">02 / DISTRIBUTED</span>
+</div>
+<div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-8">
+<p class="font-body text-on-surface-variant leading-relaxed">
+                        Event-driven microservices ecosystem designed for high-scale order processing. Utilizing message brokers to maintain eventual consistency and service autonomy across the lifecycle of a transaction.
+                    </p>
+<div class="flex flex-wrap gap-2 content-start">
+<span class="px-3 py-1 bg-surface-container-highest text-[10px] font-label uppercase tracking-widest text-on-surface-variant">Microservices</span>
+<span class="px-3 py-1 bg-surface-container-highest text-[10px] font-label uppercase tracking-widest text-on-surface-variant">Kafka</span>
+<span class="px-3 py-1 bg-surface-container-highest text-[10px] font-label uppercase tracking-widest text-on-surface-variant">Go</span>
+</div>
+</div>
+</div>
+</article>
+<!-- Project 3: Center Focused -->
+<article class="max-w-4xl mx-auto group">
+<div class="bg-surface-container-low aspect-[16/10] mb-8 overflow-hidden">
+<img class="w-full h-full object-cover grayscale opacity-90 group-hover:grayscale-0 transition-all duration-700" data-alt="Clean minimal UI dashboard of a billing system with sophisticated typography and neutral color palette" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvM2jGSLH-PJ4dNI0cWUFSUFH7rojz3EN-ZD-vpnKlziVs2mMSPsbGjMjto1xwBPhY3oB6B_sQo3HHvi1Ph1a2AEOBiRyMScQs7irSvP4BI3cH8T1xaAUf2SMWtEH2F-G7hdINfiIkz_8DEnqlu5BqmoiPcCZz2J6xEB5vUq7mtVj6i4Zmv0Dq4u0WwaTONHTGc7pAmOIIa-SIecMirb9UKJQryOYJQ7ed22ecp4b20xf1JxUMQvg8GoCh5oeDeBEeaUJqCdYxqgI"/>
+</div>
+<div class="flex flex-col md:flex-row justify-between items-baseline gap-4 border-b border-outline-variant/20 pb-4">
+<h2 class="serif-headline text-3xl italic">saas-billing-platform</h2>
+<span class="font-label text-[10px] uppercase tracking-[0.2em] text-on-surface-variant">03 / PRODUCT</span>
+</div>
+<div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-12">
+<p class="font-body text-on-surface-variant leading-relaxed">
+                    A full-cycle subscription management engine built on Laravel and integrated with Stripe. Features automated recurring billing, prorated subscription tiers, and multi-currency handling for global SaaS operations.
+                </p>
+<div class="flex flex-wrap gap-2 content-start">
+<span class="px-3 py-1 bg-surface-container-highest text-[10px] font-label uppercase tracking-widest text-on-surface-variant">PHP</span>
+<span class="px-3 py-1 bg-surface-container-highest text-[10px] font-label uppercase tracking-widest text-on-surface-variant">Laravel</span>
+<span class="px-3 py-1 bg-surface-container-highest text-[10px] font-label uppercase tracking-widest text-on-surface-variant">MySQL</span>
+</div>
+</div>
+</article>
+<!-- Project 4: Full Width Asymmetric -->
+<article class="grid grid-cols-1 md:grid-cols-12 gap-12 items-start">
+<div class="md:col-span-7 group">
+<div class="bg-surface-container aspect-square mb-8 overflow-hidden">
+<img class="w-full h-full object-cover grayscale opacity-90 group-hover:grayscale-0 transition-all duration-700" data-alt="Abstract visualization of an API marketplace showing structured code modules floating in a bright studio environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAk1xTpI6GVS1360u_g73Ztykt1A523HU9YTBJudeAvLLYoUfKin8P9BLz4EB_eJIv7NZr_ppPwJs3u3DgBBDbVAnWWpxY6kNeAjjQ344UlcWk4KZ-dM3lAh4-RegxodeC8x4-SxNjKSUAqwcpqCMl_wEd2ZXhpq03Z2NjDUSIeFahmdywJ9qnqsnke4FKE61D8zTljTXo3ygCxqTIUWrqEulvgCBg0xHgUjPklikmUZu5oXNqHM1fDVnUVN2Sr6PTxOnuJukErbsk"/>
+</div>
+<div class="flex flex-col md:flex-row justify-between items-baseline gap-4 border-b border-outline-variant/20 pb-4">
+<h2 class="serif-headline text-3xl italic">api-marketplace</h2>
+<span class="font-label text-[10px] uppercase tracking-[0.2em] text-on-surface-variant">04 / ECOSYSTEM</span>
+</div>
+<div class="mt-6">
+<p class="font-body text-on-surface-variant leading-relaxed mb-6">
+                        A typed marketplace API constructed with TypeScript. Focuses on developer experience (DX) through exhaustive documentation and robust validation layers for third-party service integration.
+                    </p>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-surface-container-highest text-[10px] font-label uppercase tracking-widest text-on-surface-variant">TypeScript</span>
+<span class="px-3 py-1 bg-surface-container-highest text-[10px] font-label uppercase tracking-widest text-on-surface-variant">Node.js</span>
+<span class="px-3 py-1 bg-surface-container-highest text-[10px] font-label uppercase tracking-widest text-on-surface-variant">PostgreSQL</span>
+</div>
+</div>
+</div>
+<div class="hidden md:block md:col-span-4 md:col-start-9 pt-20">
+<div class="p-8 bg-surface-container-low border border-outline-variant/10">
+<span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant block mb-4">Technical Stack</span>
+<p class="serif-headline italic text-xl leading-snug">
+                        "Building with TypeScript ensures type safety across distributed modules, reducing runtime errors in marketplace transactions."
+                    </p>
+</div>
+</div>
+</article>
+</section>
+<!-- CTA Section -->
+<section class="mt-40 mb-20 max-w-[1440px] mx-auto px-8 text-center">
+<div class="py-24 bg-surface-container border-y border-outline-variant/10">
+<p class="font-label text-[10px] uppercase tracking-[0.3em] text-on-surface-variant mb-6">Inquiry</p>
+<h2 class="serif-headline text-5xl italic mb-12">Looking for collaboration?</h2>
+<button class="bg-primary hover:bg-primary-dim text-on-primary px-10 py-4 font-label uppercase text-[10px] tracking-[0.2em] transition-colors duration-300">
+                GET IN TOUCH
+            </button>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (from COMPONENTS_21) - Mobile Only -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center px-6 pb-6 pt-2 bg-stone-50 dark:bg-stone-950 border-t border-stone-200/15 dark:border-stone-800/15 z-50">
+<a class="flex flex-col items-center justify-center text-stone-900 dark:text-stone-50 border-t-2 border-stone-900 dark:border-stone-50 pt-2 transition-all duration-300 ease-in-out" href="/home">
+<span class="material-symbols-outlined text-stone-800 dark:text-stone-200" data-icon="home_storage">home_storage</span>
+<span class="font-sans uppercase tracking-[0.1em] text-[10px]">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-600 pt-2 transition-all duration-300 ease-in-out hover:bg-stone-100 dark:hover:bg-stone-900" href="/projetos">
+<span class="material-symbols-outlined text-stone-800 dark:text-stone-200" data-icon="grid_view">grid_view</span>
+<span class="font-sans uppercase tracking-[0.1em] text-[10px]">Projetos</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-600 pt-2 transition-all duration-300 ease-in-out hover:bg-stone-100 dark:hover:bg-stone-900" href="/experiencia">
+<span class="material-symbols-outlined text-stone-800 dark:text-stone-200" data-icon="work_history">work_history</span>
+<span class="font-sans uppercase tracking-[0.1em] text-[10px]">Experiência</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-600 pt-2 transition-all duration-300 ease-in-out hover:bg-stone-100 dark:hover:bg-stone-900" href="/mentoria">
+<span class="material-symbols-outlined text-stone-800 dark:text-stone-200" data-icon="record_voice_over">record_voice_over</span>
+<span class="font-sans uppercase tracking-[0.1em] text-[10px]">Mentoria</span>
+</a>
+</nav>
+<!-- Footer -->
+<footer class="bg-[#ebeeef] dark:bg-zinc-900 w-full py-20 px-8 pb-32 md:pb-20">
+<div class="flex flex-col md:flex-row justify-between items-center gap-8 max-w-[1440px] mx-auto">
+<div class="font-['Newsreader'] text-lg italic text-[#5f5e5e] dark:text-zinc-400">ARCHIVE</div>
+<div class="flex flex-wrap justify-center gap-8 md:gap-12">
+<a class="text-[#5f5e5e] font-['Manrope'] text-[10px] uppercase tracking-[0.2em] hover:text-[#1a1a1a] transition-all" href="/home">Home</a>
+<a class="text-[#5f5e5e] font-['Manrope'] text-[10px] uppercase tracking-[0.2em] hover:text-[#1a1a1a] transition-all" href="/sobre">Sobre</a>
+<a class="text-[#5f5e5e] font-['Manrope'] text-[10px] uppercase tracking-[0.2em] hover:text-[#1a1a1a] transition-all" href="/projetos">Projetos</a>
+<a class="text-[#5f5e5e] font-['Manrope'] text-[10px] uppercase tracking-[0.2em] hover:text-[#1a1a1a] transition-all" href="/experiencia">Experiência</a>
+<a class="text-[#5f5e5e] font-['Manrope'] text-[10px] uppercase tracking-[0.2em] hover:text-[#1a1a1a] transition-all" href="/mentoria">Mentoria</a>
+<a class="text-[#5f5e5e] font-['Manrope'] text-[10px] uppercase tracking-[0.2em] hover:text-[#1a1a1a] transition-all" href="/contato">Contato</a>
+</div>
+<div class="text-[#5f5e5e] dark:text-zinc-400 font-['Manrope'] text-[10px] uppercase tracking-[0.2em]">
+            © 2024 CURATORIAL ARCHIVE
+        </div>
+</div>
+</footer>
+</body></html>
