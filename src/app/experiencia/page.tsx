@@ -3,37 +3,6 @@
 import { useI18n } from "@/app/_i18n/I18nProvider";
 import { Chip } from "@/components/Chip";
 
-const experiences = [
-  {
-    date: "Fev 2025 — Abr 2026",
-    title: "Revista Exato",
-    tags: ["Liderança Técnica", "Laravel", "Next.js", "Stripe"],
-    description:
-      "Responsável pela direção técnica de produtos digitais, implementando soluções robustas com Laravel no ecossistema backend e Next.js para interfaces de alta performance. Gestão completa de fluxos de pagamento e assinaturas via Stripe.",
-  },
-  {
-    date: "Abr 2024 — Set 2024",
-    title: "Revenda Mais",
-    tags: ["Laravel", "React.js"],
-    description:
-      "Atuação no desenvolvimento de sistemas de gestão automotiva, utilizando stack moderna para otimização de processos internos e experiência do usuário final.",
-  },
-  {
-    date: "Mai 2022 — Dez 2023",
-    title: "Codesign",
-    tags: ["Scrum", "Laravel", "React.js", "AngularJS"],
-    description:
-      "Imersão em ambientes ágeis utilizando metodologia Scrum. Manutenção e evolução de legados em AngularJS enquanto migrava e construía novas funcionalidades com React.js e Laravel.",
-  },
-  {
-    date: "Mai 2021 — Abr 2022",
-    title: "Econet Editora",
-    tags: ["Backend Laravel", "APIs REST", "Vue.js", "React.js"],
-    description:
-      "Foco no desenvolvimento backend e arquitetura de APIs RESTful para suporte a múltiplos frontends em Vue e React, garantindo integridade de dados e performance para uma base sólida de usuários.",
-  },
-];
-
 const previousExperience = [
   { company: "WebControl", role: "Fullstack Dev" },
   { company: "Tuxon", role: "Software Engineer" },
@@ -59,7 +28,7 @@ export default function Experiencia() {
           <div className="md:col-span-4 flex justify-end">
             <div className="text-right">
               <span className="label block text-on-surface-variant mb-1">
-                Status atual
+                {t.experiencia.statusLabel}
               </span>
               <span className="label text-primary">{t.experiencia.status}</span>
             </div>
@@ -68,7 +37,7 @@ export default function Experiencia() {
       </section>
 
       <section className="space-y-16 md:space-y-24 py-16">
-        {experiences.map((exp, index) => (
+        {t.experiencia.list.map((exp, index) => (
           <div key={index} className="group grid md:grid-cols-12 gap-8">
             <div className="md:col-span-3">
               <span className="label text-on-surface-variant">{exp.date}</span>

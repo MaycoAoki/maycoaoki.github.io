@@ -114,7 +114,7 @@ export default function Projetos() {
       </section>
 
       <section className="py-20 md:py-32 text-center bg-surface-container border-y border-outline-variant/10 -mx-6 px-6">
-        <p className="label text-on-surface-variant mb-4">Inquiry</p>
+        <p className="label text-on-surface-variant mb-4">{t.projetos.inquiry}</p>
         <h2 className="serif italic text-3xl md:text-5xl mb-8">
           {t.projetos.cta}
         </h2>

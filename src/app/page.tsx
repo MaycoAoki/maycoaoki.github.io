@@ -59,7 +59,7 @@ export default function Home() {
             </div>
             <div className="absolute -bottom-6 -left-6 bg-surface p-6 md:p-8 shadow-sm">
               <span className="serif italic text-4xl text-on-surface block">6+</span>
-              <p className="label-sm text-on-surface-variant mt-2">Years Excellence</p>
+              <p className="label-sm text-on-surface-variant mt-2">{t.home.yearsExcellence}</p>
             </div>
           </div>
         </div>
