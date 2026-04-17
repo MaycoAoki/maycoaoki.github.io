@@ -4,11 +4,14 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { useI18n } from "@/app/_i18n/I18nProvider";
+import { useTheme } from "@/components/ThemeProvider";
+import { SunIcon, MoonIcon, Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 export function Header() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const { locale, setLocale, t } = useI18n();
+  const { theme, toggleTheme } = useTheme();
 
   const navLinks = [
     { href: "/", label: t.nav.home },
@@ -25,7 +28,7 @@ export function Header() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-surface/80 backdrop-blur-xl border-b border-outline-variant/5">
-      <div className="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-3">
           <span className="text-xl font-serif tracking-widest font-bold text-on-surface">
             @MAYCOAOKI
@@ -47,6 +50,17 @@ export function Header() {
             </Link>
           ))}
           <button
+            onClick={toggleTheme}
+            className="p-2 text-on-surface-variant hover:text-on-surface transition-colors duration-300"
+            aria-label="Toggle theme"
+          >
+            {theme === "light" ? (
+              <SunIcon className="w-5 h-5" />
+            ) : (
+              <MoonIcon className="w-5 h-5" />
+            )}
+          </button>
+          <button
             onClick={toggleLocale}
             className="label text-on-surface-variant hover:text-on-surface transition-colors duration-300"
           >
@@ -54,7 +68,18 @@ export function Header() {
           </button>
         </nav>
 
-        <div className="flex items-center gap-4 md:hidden">
+        <div className="flex items-center gap-2 md:hidden">
+          <button
+            onClick={toggleTheme}
+            className="p-2 text-on-surface-variant"
+            aria-label="Toggle theme"
+          >
+            {theme === "light" ? (
+              <SunIcon className="w-5 h-5" />
+            ) : (
+              <MoonIcon className="w-5 h-5" />
+            )}
+          </button>
           <button
             onClick={toggleLocale}
             className="label text-on-surface-variant"
@@ -66,28 +91,11 @@ export function Header() {
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              {isOpen ? (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={1.5}
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              ) : (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={1.5}
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              )}
-            </svg>
+            {isOpen ? (
+              <XMarkIcon className="w-6 h-6" />
+            ) : (
+              <Bars3Icon className="w-6 h-6" />
+            )}
           </button>
         </div>
       </div>

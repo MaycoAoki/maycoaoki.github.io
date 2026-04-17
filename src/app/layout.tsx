@@ -4,6 +4,7 @@ import { Header } from "@/components/Header";
 import { BottomNav } from "@/components/BottomNav";
 import { Footer } from "@/components/Footer";
 import { I18nProvider } from "@/app/_i18n/I18nProvider";
+import { ThemeProvider } from "@/components/ThemeProvider";
 import "./globals.css";
 
 const newsreader = Newsreader({
@@ -39,10 +40,12 @@ export default function RootLayout({
     >
       <body className="min-h-screen flex flex-col bg-surface text-on-surface">
         <I18nProvider>
-          <Header />
-          <main className="flex-1 pt-20 pb-24 md:pb-0">{children}</main>
-          <Footer />
-          <BottomNav />
+          <ThemeProvider>
+            <Header />
+            <main className="flex-1 pt-16 pb-24 md:pb-0">{children}</main>
+            <Footer />
+            <BottomNav />
+          </ThemeProvider>
         </I18nProvider>
       </body>
     </html>

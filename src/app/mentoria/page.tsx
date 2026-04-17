@@ -39,7 +39,7 @@ export default function Mentoria() {
 
   return (
     <div className="max-w-7xl mx-auto px-6">
-      <section className="min-h-[50vh] flex flex-col justify-end pb-16">
+      <section className="min-h-[20vh] flex flex-col justify-center py-12 md:min-h-[30vh] md:py-20">
         <div className="grid md:grid-cols-12 gap-8">
           <div className="md:col-span-8">
             <span className="label text-on-surface-variant mb-4 block">{tm.subtitle}</span>

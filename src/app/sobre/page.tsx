@@ -3,13 +3,14 @@
 import Link from "next/link";
 import { useI18n } from "@/app/_i18n/I18nProvider";
 import { Button } from "@/components/Button";
+import { BoltIcon, CodeBracketIcon, BuildingLibraryIcon, CloudIcon } from "@heroicons/react/24/outline";
 
 export default function Sobre() {
   const { t } = useI18n();
 
   return (
     <div className="max-w-7xl mx-auto px-6">
-      <section className="min-h-[50vh] flex flex-col justify-end pb-16">
+      <section className="min-h-[20vh] flex flex-col justify-center py-12 md:min-h-[30vh] md:py-20">
         <div className="grid md:grid-cols-12 gap-8 items-end">
           <div className="md:col-span-7">
             <span className="label text-on-surface-variant mb-4 block">
@@ -57,7 +58,7 @@ export default function Sobre() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-px bg-outline-variant/15">
           <div className="bg-surface-container-low p-8 flex flex-col justify-between aspect-square md:aspect-auto">
             <div>
-              <span className="text-3xl block mb-4">⚡</span>
+              <BoltIcon className="w-7 h-7 text-on-surface mb-4" />
               <h3 className="label text-on-surface mb-4">{t.sobre.backend}</h3>
               <ul className="space-y-2 text-on-surface-variant text-sm">
                 <li>PHP / Laravel</li>
@@ -70,7 +71,7 @@ export default function Sobre() {
 
           <div className="bg-surface-container p-8 flex flex-col justify-between aspect-square md:aspect-auto">
             <div>
-              <span className="text-3xl block mb-4">⚛</span>
+              <CodeBracketIcon className="w-7 h-7 text-on-surface mb-4" />
               <h3 className="label text-on-surface mb-4">{t.sobre.frontend}</h3>
               <ul className="space-y-2 text-on-surface-variant text-sm">
                 <li>React.js / Next.js</li>
@@ -83,7 +84,7 @@ export default function Sobre() {
 
           <div className="bg-surface-container-high p-8 flex flex-col justify-between aspect-square md:aspect-auto">
             <div>
-              <span className="text-3xl block mb-4">🏗</span>
+              <BuildingLibraryIcon className="w-7 h-7 text-on-surface mb-4" />
               <h3 className="label text-on-surface mb-4">{t.sobre.arquitectura}</h3>
               <ul className="space-y-2 text-on-surface-variant text-sm">
                 <li>SOLID Principles</li>
@@ -95,7 +96,7 @@ export default function Sobre() {
 
           <div className="bg-surface-container-highest p-8 flex flex-col justify-between aspect-square md:aspect-auto">
             <div>
-              <span className="text-3xl block mb-4">☁</span>
+              <CloudIcon className="w-7 h-7 text-on-surface mb-4" />
               <h3 className="label text-on-surface mb-4">{t.sobre.infra}</h3>
               <ul className="space-y-2 text-on-surface-variant text-sm">
                 <li>Docker</li>

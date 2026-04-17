@@ -10,7 +10,7 @@ export default function Contato() {
 
   return (
     <div className="max-w-7xl mx-auto px-6">
-      <section className="min-h-[40vh] flex flex-col justify-center items-center text-center pb-16">
+      <section className="min-h-[20vh] flex flex-col justify-center items-center text-center py-12 md:min-h-[30vh] md:py-20">
         <h1 className="serif italic font-medium text-4xl md:text-6xl lg:text-8xl leading-tight mb-6">
           {tc.title}
         </h1>

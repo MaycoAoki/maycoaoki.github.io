@@ -4,13 +4,14 @@ import Link from "next/link";
 import { useI18n } from "@/app/_i18n/I18nProvider";
 import { Button } from "@/components/Button";
 import { Chip } from "@/components/Chip";
+import { BoltIcon, ComputerDesktopIcon, CodeBracketIcon, WrenchScrewdriverIcon } from "@heroicons/react/24/outline";
 
 export default function Home() {
   const { t } = useI18n();
 
   return (
     <div className="max-w-7xl mx-auto px-6">
-      <section className="min-h-[70vh] flex flex-col justify-end pb-16 md:min-h-[60vh]">
+      <section className="min-h-[30vh] flex flex-col justify-center py-12 md:min-h-[40vh] md:py-20">
         <div className="grid md:grid-cols-12 gap-8 items-end">
           <div className="md:col-span-8">
             <span className="label text-on-surface-variant mb-4 block">
@@ -73,7 +74,7 @@ export default function Home() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
           <div className="md:col-span-2 md:row-span-2 bg-surface-container-low p-8 md:p-12 flex flex-col justify-between aspect-square md:aspect-auto min-h-[280px]">
-            <span className="text-4xl">⚡</span>
+            <BoltIcon className="w-10 h-10 text-on-surface" />
             <div>
               <h3 className="serif text-2xl md:text-3xl mb-3">{t.home.backend}</h3>
               <p className="text-on-surface-variant leading-relaxed mb-4">
@@ -88,7 +89,7 @@ export default function Home() {
           </div>
 
           <div className="bg-surface-container-highest p-6 md:p-8 aspect-square flex flex-col justify-between">
-            <span className="text-2xl">🖥</span>
+            <ComputerDesktopIcon className="w-8 h-8 text-on-surface" />
             <div>
               <h4 className="label mb-2">{t.home.nodejs}</h4>
               <p className="text-sm text-on-surface-variant">
@@ -98,7 +99,7 @@ export default function Home() {
           </div>
 
           <div className="bg-surface-container p-6 md:p-8 aspect-square flex flex-col justify-between">
-            <span className="text-2xl">⚛</span>
+            <CodeBracketIcon className="w-8 h-8 text-on-surface" />
             <div>
               <h4 className="label mb-2">{t.home.react}</h4>
               <p className="text-sm text-on-surface-variant">
@@ -114,7 +115,7 @@ export default function Home() {
                 {t.home.frameworksText}
               </p>
             </div>
-            <span className="text-3xl opacity-40 hidden md:block">🔧</span>
+            <WrenchScrewdriverIcon className="w-8 h-8 text-on-surface opacity-40 hidden md:block" />
           </div>
         </div>
       </section>
@@ -125,8 +126,8 @@ export default function Home() {
             <div className="md:col-span-7">
               <div className="aspect-video bg-surface-container-high overflow-hidden grayscale hover:grayscale-0 transition-all duration-700">
                 <img
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEjGncYeuZR1OzglW1cHK0NJQqBJV8Y-VNpMBm8XtCTmqebLn3ybaRa3f5iu_kFZJ_lKJtxpTyheG2h-EoH3DNkof4Bwr3ZpsUpYggDS08aEYjwTYMuuPAglGp-7dpnoBfFCrBTsn-8wd22xc56H7B_RcB_XlBl1FnqgV0-sgb9glljk4Mf_RNCu8ZkS5fneMAyXGpCyp84dN3TdZuIPGhfea7y2kIRb1Gnx2s2M_7UiIhPNG17uIWgwz1BFGR7OrDxXXjhRrlTng"
-                  alt="Financial dashboard interface"
+                  src="/escalabilidade-bancaria.png"
+                  alt={t.home.project1Title}
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -152,8 +153,8 @@ export default function Home() {
             <div className="md:col-span-7 md:col-start-6">
               <div className="aspect-video bg-surface-container-high overflow-hidden grayscale hover:grayscale-0 transition-all duration-700">
                 <img
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpR21AG6_NOpVz8GzFhe6zHuzb0C3ZknMbfLdTntPuZrbATMXO_PA5aKgK_xqW8dGnDuF4J9IeA4LxziZGNhb44B70BVD4RETtU9Mnc6S3E0wEwLlGDtNjzmCLYbzUBh5b_sEz05dHaSF7a0CiJSZv8vq-eFloQcDshGA7MQ6LFCckRVVRC_kLSmMQFqNyYyDhpLIvvnYwUf3D3xXGcf6qmvtAAvKS5L_ONgHiyqskgOohbTn7gYJXkNiBkK2uuJyN9lQ2l4LtAMI"
-                  alt="E-commerce architecture diagram"
+                  src="/engine-disponibilidade.png"
+                  alt={t.home.project2Title}
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -178,4 +179,4 @@ export default function Home() {
       </section>
     </div>
   );
-}
+};
