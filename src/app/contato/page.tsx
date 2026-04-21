@@ -35,12 +35,23 @@ export default function Contato() {
               </div>
               <div>
                 <span className="label-sm text-on-surface-variant block mb-1">{tc.telefone}</span>
-                <a
-                  href="tel:+55419992417303"
-                  className="serif italic text-xl md:text-2xl hover:text-primary transition-colors"
-                >
-                  (41) 9 9241-7303
-                </a>
+                <div className="flex flex-col gap-2">
+                  <a
+                    href="tel:+5541992417303"
+                    className="serif italic text-xl md:text-2xl hover:text-primary transition-colors inline-block w-fit"
+                  >
+                    (41) 9 9241-7303
+                  </a>
+                  <a
+                    href="https://wa.me/5541991141869"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="serif italic text-xl md:text-2xl hover:text-primary transition-colors flex items-center gap-3 w-fit"
+                  >
+                    (41) 9 9114-1869 
+                    <span className="text-sm not-italic font-sans text-on-surface-variant opacity-80">(WhatsApp Business)</span>
+                  </a>
+                </div>
               </div>
               <div>
                 <span className="label-sm text-on-surface-variant block mb-1">{tc.local}</span>

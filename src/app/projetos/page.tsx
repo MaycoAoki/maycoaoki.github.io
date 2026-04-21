@@ -17,6 +17,7 @@ export default function Projetos() {
       tech: t.projetos.project1Tech,
       image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCrYaBaitbWTHhkEOwvDxaF3Ojmmhlet_0ptGOBl4k7Zz26k0NVFD-BnV0IM_1uMKJtE_r_riRo9Ryt7EkRkgisHrlgsUtWHqn595yPL_ArbzTlcftxbpw0Tisdx2TSb-6dzKHZFYflRaw4NEmn2pK0t3J9QfPAKuAItHFQQ8F3xUzfHbTn_JJMxMm4lTuB6KnITi1YVHA9t5J13mtxJ07PrGVsSkQKTQ_4xi0i0Zm9WvGv8Khnw4Bq1V4CkiKycKCykk9tIKvCRFY",
       reverse: false,
+      link: "https://github.com/MaycoAoki/payment-commerce-platform",
     },
     {
       id: "02",
@@ -26,6 +27,7 @@ export default function Projetos() {
       tech: t.projetos.project2Tech,
       image: "https://lh3.googleusercontent.com/aida-public/AB6AXuBWDd6y4_TopbEhnJcx2mIkE1buapyF_2o9IyG04k9pMFoSRGYSjiT1mSRauRN8_IV0yH5qn0yQAxEWuD7KgjDPHXQIrU5LiXOdwmk33wSBf9MXRZGC7kOGZIeO2ihGLO1LMeMcJcdAuHTB8lC9sTaEuD5cPS8cgKI4h86so-kGy-dqzQtpoGL_qrhwY-Y2QKQ718h2SEaWJlKnj9XxsSzV_HECk41pCGFDWGP3zz50YeHYdh1Z24KT5F3Zh59qNR4o9OiS1tfaHHY",
       reverse: true,
+      link: "https://github.com/MaycoAoki/order-processing-platform",
     },
     {
       id: "03",
@@ -35,6 +37,7 @@ export default function Projetos() {
       tech: t.projetos.project3Tech,
       image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDvM2jGSLH-PJ4dNI0cWUFSUFH7rojz3EN-ZD-vpnKlziVs2mMSPsbGjMjto1xwBPhY3oB6B_sQo3HHvi1Ph1a2AEOBiRyMScQs7irSvP4BI3cH8T1xaAUf2SMWtEH2F-G7hdINfiIkz_8DEnqlu5BqmoiPcCZz2J6xEB5vUq7mtVj6i4Zmv0Dq4u0WwaTONHTGc7pAmOIIa-SIecMirb9UKJQryOYJQ7ed22ecp4b20xf1JxUMQvg8GoCh5oeDeBEeaUJqCdYxqgI",
       reverse: false,
+      link: "https://github.com/MaycoAoki/saas-billing-platform",
     },
     {
       id: "04",
@@ -44,6 +47,7 @@ export default function Projetos() {
       tech: t.projetos.project4Tech,
       image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAk1xTpI6GVS1360u_g73Ztykt1A523HU9YTBJudeAvLLYoUfKin8P9BLz4EB_eJIv7NZr_ppPwJs3u3DgBBDbVAnWWpxY6kNeAjjQ344UlcWk4KZ-dM3lAh4-RegxodeC8x4-SxNjKSUAqwcpqCMl_wEd2ZXhpq03Z2NjDUSIeFahmdywJ9qnqsnke4FKE61D8zTljTXo3ygCxqTIUWrqEulvgCBg0xHgUjPklikmUZu5oXNqHM1fDVnUVN2Sr6PTxOnuJukErbsk",
       reverse: true,
+      link: "https://github.com/MaycoAoki/api-marketplace",
     },
   ];
 
@@ -80,11 +84,21 @@ export default function Projetos() {
               }
             >
               <div className="aspect-video bg-surface-container-low md:bg-surface-container-high overflow-hidden grayscale hover:grayscale-0 transition-all duration-700">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover"
-                />
+                {project.link ? (
+                  <a href={project.link} target="_blank" rel="noopener noreferrer">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                    />
+                  </a>
+                ) : (
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover"
+                  />
+                )}
               </div>
             </div>
             <div
@@ -98,7 +112,18 @@ export default function Projetos() {
                 {project.id} / {project.category}
               </span>
               <h2 className="serif italic text-2xl md:text-3xl mt-3 mb-4">
-                {project.title}
+                {project.link ? (
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-primary transition-colors duration-300"
+                  >
+                    {project.title}
+                  </a>
+                ) : (
+                  project.title
+                )}
               </h2>
               <p className="text-on-surface-variant leading-relaxed mb-6">
                 {project.description}
